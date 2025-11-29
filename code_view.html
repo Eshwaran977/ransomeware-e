@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title }} - File Encryptor Suite</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#12121a; color:#e6e6e6; margin:0; padding:20px }
+    header { display:flex; align-items:center; justify-content:space-between }
+    pre { background:#0f0f17; padding:16px; border-radius:6px; overflow:auto; max-height:70vh }
+    a.button { background:#2b8aef; color:white; padding:8px 12px; text-decoration:none; border-radius:6px }
+    a.button.secondary { background:#6c6c75 }
+    .meta { margin:8px 0 18px }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{{ title }}</h1>
+    <div>
+      <a class="button" href="/">Home</a>
+      <a class="button secondary" href="/download/{{ filename }}">Download {{ filename }}</a>
+    </div>
+  </header>
+  <div class="meta">Showing <strong>{{ filename }}</strong> from the templates folder.</div>
+  <pre>{{ code | e }}</pre>
+</body>
+</html>
